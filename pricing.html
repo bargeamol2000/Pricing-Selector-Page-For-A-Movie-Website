@@ -1,0 +1,97 @@
+<html>
+
+<head>
+    <title>Our Plans</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    <style>
+        body {
+            background-image: url('imgs/bg.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .pricing-cotainer {
+            position: fixed;
+            left: 50%;
+            margin-left: -400px;
+            top: 30%;
+            width: 60%;
+            height: 60%;
+            padding: 40px;
+            background-color: rgb(40, 40, 54,0.7)
+        }
+
+        .plan-card{
+            background-color: #282836;
+            cursor: pointer;
+        }
+
+        .selected-plan{
+            background-color: #2f3b52;
+            border-color: #4760bf;
+            margin: 5px;
+            border-width: 2px;
+        }
+
+        .heading{
+            color: white;
+            text-align: center;
+        }
+
+        .card-text{
+            color: aliceblue;
+        }
+
+        .card-deck{
+            margin-top: 10%;
+        }
+    </style>
+</head>
+
+<script>
+    function select(obj){
+        $(".selected-plan").removeClass("selected-plan");
+        $(obj).addClass("selected-plan");
+    }
+</script>
+
+
+
+<div class="card pricing-cotainer">
+    <h3 class="heading">FIND THE PERFECT PLAN FOR YOU</h3>
+    <h5 class="heading">It is always flexible to grow</h5>
+    <div class="card-deck">
+        <div class="card plan-card" onclick="select(this)">
+            <div class="card-body text-center">
+                <h6 class="card-text">Free</h6>
+                <h1 class="card-text">$0</h1>
+            </div>
+        </div>
+        <div class="card plan-card" onclick="select(this)">
+            <div class="card-body text-center">
+                <h6 class="card-text">Premium</h6>
+                <h1 class="card-text">$49</h1>
+            </div>
+        </div>
+        <div class="card plan-card" onclick="select(this)">
+            <div class="card-body text-center">
+                <h6 class="card-text selected">VIP</h6>
+                <h1 class="card-text">$99</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+</html>
